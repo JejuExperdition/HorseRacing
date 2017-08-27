@@ -5,7 +5,8 @@
 #include "TLevel.h"
 
 Game::Game() :
-	m_CurLevel(nullptr)
+	m_CurLevel(nullptr),
+	m_NextLevel(nullptr)
 {
 	GameWindow::initialize();
 	Graphics::initialize();
@@ -38,5 +39,16 @@ bool Game::frame()
 
 	Graphics::getInstance()->drawLevel(m_CurLevel);
 
+	if (m_NextLevel)
+	{
+		m_CurLevel = m_NextLevel;
+		m_NextLevel = nullptr;
+	}
+
 	return true;
+}
+
+void Game::setNextLevel(GameLevel* nextLevel)
+{
+	m_NextLevel = nextLevel;
 }

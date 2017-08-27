@@ -25,6 +25,18 @@
     <Filter Include="Image">
       <UniqueIdentifier>{255a4c68-65b7-42e4-afa2-6b9252e8881b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\GameObject">
+      <UniqueIdentifier>{75550894-6300-443b-be17-edbb120e76d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\GameObject">
+      <UniqueIdentifier>{3e4acbbd-8638-4c3a-84e8-61dd270f3d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\GameLevel">
+      <UniqueIdentifier>{4fa271c7-3f39-4be1-9792-4e3bbef623eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\GameLevel">
+      <UniqueIdentifier>{e2ea1f93-6326-4cc4-85eb-6f9f531373bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,20 +66,20 @@
     <ClCompile Include="Camera.cpp">
       <Filter>소스 파일\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="GameLevel.cpp">
+    <ClCompile Include="Input.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="TLevel.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="GameLevel.cpp">
+      <Filter>소스 파일\GameLevel</Filter>
     </ClCompile>
     <ClCompile Include="BackGround.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="TLevel.cpp">
+      <Filter>소스 파일\GameLevel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,9 +93,6 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="GameLevel.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Graphics.h">
@@ -101,17 +110,20 @@
     <ClInclude Include="Camera.h">
       <Filter>헤더 파일\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="TLevel.h">
+    <ClInclude Include="Input.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="BackGround.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="GameObject.h">
+      <Filter>헤더 파일\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="TLevel.h">
+      <Filter>헤더 파일\GameLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLevel.h">
+      <Filter>헤더 파일\GameLevel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
