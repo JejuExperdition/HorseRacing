@@ -1,5 +1,6 @@
 #pragma once
 #include "GameLevel.h"
+#include "Horse.h"
 
 class InGameLevel : public GameLevel
 {
@@ -10,5 +11,5 @@ public:
 	void update(float deltaTime) override;
 
 private:
-
+	Horse m_Horse;
 };

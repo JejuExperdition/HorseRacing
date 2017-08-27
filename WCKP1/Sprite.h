@@ -1,13 +1,15 @@
 #pragma once
 #include "TextureManager.h"
+#include <string>
+#include <vector>
 
 class Sprite
 {
 public:
-	Sprite(const char* name);
-	Sprite(const char* name, float fps);
-	Sprite(int count, const char** names);
-	Sprite(int count, float fps, const char** names);
+	Sprite(std::string name);
+	Sprite(std::string name, float fps);
+	Sprite(int count, std::vector<std::string> names);
+	Sprite(int count, float fps, std::vector<std::string> names);
 	~Sprite();
 
 	void update(float deltaTime);

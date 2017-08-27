@@ -1,6 +1,6 @@
 #include "Sprite.h"
 
-Sprite::Sprite(int count, float speed, const char** names) :
+Sprite::Sprite(int count, float speed, std::vector<std::string> names) :
 	m_TextureCount(count),
 	m_Textures(new Texture*[count]),
 	m_Speed(speed),
@@ -9,24 +9,24 @@ Sprite::Sprite(int count, float speed, const char** names) :
 {
 	for (int i = 0; i < m_TextureCount; i++)
 	{
-		m_Textures[i] = &TextureManager::getInstance()->getTexture(names[i]);
+		m_Textures[i] = &TextureManager::getInstance()->getTexture(names[i].c_str());
 	}
 }
 
-Sprite::Sprite(int count, const char** names) :
+Sprite::Sprite(int count, std::vector<std::string> names) :
 	Sprite(count, 60, names)
 {
 
 }
 
-Sprite::Sprite(const char* name) :
-	Sprite(1, 60, &name)
+Sprite::Sprite(std::string name) :
+	Sprite(1, 60, std::vector<std::string>({ name }))
 {
 
 }
 
-Sprite::Sprite(const char* name, float fps) :
-	Sprite(1, fps, &name)
+Sprite::Sprite(std::string name, float fps) :
+	Sprite(1, fps, std::vector<std::string>({ name }))
 {
 
 }

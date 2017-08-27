@@ -16,58 +16,58 @@
     <Filter Include="Shader">
       <UniqueIdentifier>{38a4b0f0-59c6-4a67-9c92-9c2fb0c80a7c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Graphics">
-      <UniqueIdentifier>{09452940-e7ea-4537-a74a-dd781a845772}</UniqueIdentifier>
-    </Filter>
     <Filter Include="헤더 파일\Graphics">
       <UniqueIdentifier>{598a81aa-0c63-4770-ae5e-61983a7191f7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Image">
       <UniqueIdentifier>{255a4c68-65b7-42e4-afa2-6b9252e8881b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Game">
+      <UniqueIdentifier>{25f9f4cb-fca5-4147-bceb-98ee994dc381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Game">
+      <UniqueIdentifier>{e3c90d3f-56e9-4f69-a94a-9d8e3edf3338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ETC">
+      <UniqueIdentifier>{4558bea1-bbb7-4211-84de-38e539f7bfd9}</UniqueIdentifier>
+    </Filter>
     <Filter Include="소스 파일\GameObject">
       <UniqueIdentifier>{75550894-6300-443b-be17-edbb120e76d1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\GameObject">
-      <UniqueIdentifier>{3e4acbbd-8638-4c3a-84e8-61dd270f3d2d}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\GameLevel">
       <UniqueIdentifier>{4fa271c7-3f39-4be1-9792-4e3bbef623eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ETC\Graphics">
+      <UniqueIdentifier>{09452940-e7ea-4537-a74a-dd781a845772}</UniqueIdentifier>
+    </Filter>
     <Filter Include="헤더 파일\GameLevel">
       <UniqueIdentifier>{e2ea1f93-6326-4cc4-85eb-6f9f531373bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\GameObject">
+      <UniqueIdentifier>{3e4acbbd-8638-4c3a-84e8-61dd270f3d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ETC">
+      <UniqueIdentifier>{a4e4fa00-e606-434d-bd34-c78945ace4a0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="GameWindow.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="error.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Graphics.cpp">
-      <Filter>소스 파일\Graphics</Filter>
+      <Filter>소스 파일\ETC\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Shader.cpp">
-      <Filter>소스 파일\Graphics</Filter>
+      <Filter>소스 파일\ETC\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Texture.cpp">
-      <Filter>소스 파일\Graphics</Filter>
+      <Filter>소스 파일\ETC\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="VertexArray.cpp">
-      <Filter>소스 파일\Graphics</Filter>
+      <Filter>소스 파일\ETC\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>소스 파일\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\ETC\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>소스 파일\GameObject</Filter>
@@ -81,20 +81,32 @@
     <ClCompile Include="TLevel.cpp">
       <Filter>소스 파일\GameLevel</Filter>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWindow.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Horse.cpp">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="error.cpp">
+      <Filter>소스 파일\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="InGameLevel.cpp">
+      <Filter>소스 파일\GameLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>소스 파일\ETC\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>소스 파일\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>소스 파일\ETC\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameWindow.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Error.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Singleton.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Graphics.h">
       <Filter>헤더 파일\Graphics</Filter>
     </ClInclude>
@@ -110,9 +122,6 @@
     <ClInclude Include="Camera.h">
       <Filter>헤더 파일\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="BackGround.h">
       <Filter>헤더 파일\GameObject</Filter>
     </ClInclude>
@@ -124,6 +133,33 @@
     </ClInclude>
     <ClInclude Include="GameLevel.h">
       <Filter>헤더 파일\GameLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWindow.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Horse.h">
+      <Filter>헤더 파일\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="InGameLevel.h">
+      <Filter>헤더 파일\GameLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>헤더 파일\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>헤더 파일\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Error.h">
+      <Filter>헤더 파일\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>헤더 파일\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>헤더 파일\ETC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +173,15 @@
   <ItemGroup>
     <Image Include="Down.dds">
       <Filter>Image</Filter>
+    </Image>
+    <Image Include="res\Background1.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\horse0.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\horse1.png">
+      <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>
 </Project>

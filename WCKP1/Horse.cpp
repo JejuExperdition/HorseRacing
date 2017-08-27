@@ -2,7 +2,7 @@
 
 Horse::Horse(ID3D11Device* device) :
 	GameObject(device, 82, 442, 0, &m_Sprite),
-	m_Sprite(2, 3, { "Horse1", "Horse2" })
+	m_Sprite(2, 5, { "Horse0", "Horse1" })
 {
 
 }

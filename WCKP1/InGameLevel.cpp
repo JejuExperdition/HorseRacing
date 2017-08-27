@@ -2,9 +2,10 @@
 #include "Input.h"
 
 InGameLevel::InGameLevel(ID3D11Device* device) :
-	GameLevel(device, "")
+	GameLevel(device, "Background1"),
+	m_Horse(device)
 {
-
+	addObject(&m_Horse);
 }
 
 InGameLevel::~InGameLevel()

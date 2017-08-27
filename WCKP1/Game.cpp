@@ -2,7 +2,7 @@
 #include "GameWindow.h"
 #include "Graphics.h"
 #include "Input.h"
-#include "TLevel.h"
+#include "InGameLevel.h"
 
 Game::Game() :
 	m_CurLevel(nullptr),
@@ -12,7 +12,7 @@ Game::Game() :
 	Graphics::initialize();
 	Input::initialize();
 	TextureManager::initialize();
-	m_CurLevel = new TLevel(Graphics::getInstance()->getDevice());
+	m_CurLevel = new InGameLevel(Graphics::getInstance()->getDevice());
 }
 
 Game::~Game()
