@@ -10,11 +10,13 @@ Game::Game() :
 	GameWindow::initialize();
 	Graphics::initialize();
 	Input::initialize();
+	TextureManager::initialize();
 	m_CurLevel = new TLevel(Graphics::getInstance()->getDevice());
 }
 
 Game::~Game()
 {
+	TextureManager::shutdown();
 	Input::shutdown();
 	Graphics::shutdown();
 	GameWindow::shutdown();
@@ -34,7 +36,7 @@ bool Game::frame()
 		return false;
 	}
 
-	m_CurLevel->update(1 / 60.0f);
+	m_CurLevel->updateAll(1 / 60.0f);
 
 	Graphics::getInstance()->drawLevel(m_CurLevel);
 

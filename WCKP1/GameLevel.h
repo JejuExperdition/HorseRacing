@@ -4,7 +4,7 @@
 #include <set>
 #include "Camera.h"
 #include "BackGround.h"
-#include "Texture.h"
+#include "Sprite.h"
 #include "GameObject.h"
 
 class GameLevel
@@ -12,6 +12,7 @@ class GameLevel
 public:
 	GameLevel(ID3D11Device* device, const char* bgTexturePath);
 	virtual ~GameLevel();
+	virtual void updateAll(float deltaTime) final;
 	virtual void update(float deltaTime) = 0;
 	virtual void draw(ID3D11DeviceContext* deviceContext) final;
 
@@ -25,7 +26,7 @@ protected:
 	virtual bool isIncludeObject(GameObject* obj) const final { return m_ObjectSet.count(obj) == 1 ? true : false; }
 private:
 	Camera m_Camera;
-	Texture m_BGTexture;
+	Sprite m_BGSprite;
 	BackGround m_Background;
 	std::set<GameObject*> m_ObjectSet;
 };
