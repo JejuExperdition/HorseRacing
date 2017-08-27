@@ -11,8 +11,11 @@ public:
 	~Game();
 
 	void run();
+
+	void setNextLevel(GameLevel* nextLevel);
 private:
 	bool frame();
 
 	GameLevel* m_CurLevel;
+	GameLevel* m_NextLevel;
 };
