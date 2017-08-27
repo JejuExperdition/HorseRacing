@@ -2,7 +2,7 @@
 #include "Input.h"
 
 TLevel::TLevel(ID3D11Device* device) :
-	GameLevel(device, "./Down.dds")
+	GameLevel(device, "Down")
 {
 
 }

@@ -1,9 +1,9 @@
 #include "GameObject.h"
 #include "Error.h"
 
-GameObject::GameObject(ID3D11Device* device, float width, float height, float depth, Texture* texture):
+GameObject::GameObject(ID3D11Device* device, float width, float height, float depth, Sprite* spr):
 	m_VertexArray(device, width, height, depth),
-	m_Texture(texture),
+	m_Sprite(spr),
 	m_Position({ 0.0f, 0.0f }),
 	m_Size({ 1.0f, 1.0f }),
 	m_Angle( 0 )
@@ -42,6 +42,12 @@ GameObject::~GameObject()
 	}
 }
 
+void GameObject::updateAll(float deltaTime)
+{
+	m_Sprite->update(deltaTime);
+	update(deltaTime);
+}
+
 void GameObject::draw(ID3D11DeviceContext* deviceContext)
 {
 	XMMATRIX translate = XMMatrixTranslation(m_Position.x, m_Position.y, 0);
@@ -61,6 +67,6 @@ void GameObject::draw(ID3D11DeviceContext* deviceContext)
 
 	deviceContext->VSSetConstantBuffers(0, 1, &m_WorldMatrixBuffer);
 
-	m_Texture->bind(deviceContext);
+	m_Sprite->bind(deviceContext);
 	m_VertexArray.draw(deviceContext);
 }
