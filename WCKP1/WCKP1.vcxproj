@@ -202,6 +202,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Down.dds" />
+    <Image Include="res\Background1.png" />
+    <Image Include="res\horse0.png" />
+    <Image Include="res\horse1.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

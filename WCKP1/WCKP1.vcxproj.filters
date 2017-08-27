@@ -126,5 +126,14 @@
     <Image Include="Down.dds">
       <Filter>Image</Filter>
     </Image>
+    <Image Include="res\Background1.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\horse0.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\horse1.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>
