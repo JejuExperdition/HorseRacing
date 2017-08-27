@@ -2,15 +2,16 @@
 #include <D3D11.h>
 #include <xnamath.h>
 #include "VertexArray.h"
-#include "Texture.h"
+#include "Sprite.h"
 
 class GameObject
 {
 public:
-	GameObject(ID3D11Device* device, float width, float height, float depth, Texture* texture);
+	GameObject(ID3D11Device* device, float width, float height, float depth, Sprite* spr);
 	GameObject(GameObject&) = delete;
 	virtual ~GameObject();
 
+	virtual void updateAll(float deltaTime) final;
 	virtual void update(float deltaTime) = 0;
 	virtual void draw(ID3D11DeviceContext* deviceContext) final;
 protected:
@@ -26,7 +27,7 @@ protected:
 	virtual float getAngle() const final { return m_Angle; }
 private:
 	VertexArray m_VertexArray;
-	Texture* m_Texture;
+	Sprite* m_Sprite;
 	XMFLOAT2 m_Position;
 	XMFLOAT2 m_Size;
 	float m_Angle;
