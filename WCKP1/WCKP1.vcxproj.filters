@@ -78,9 +78,6 @@
     <ClCompile Include="BackGround.cpp">
       <Filter>소스 파일\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="TLevel.cpp">
-      <Filter>소스 파일\GameLevel</Filter>
-    </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>소스 파일\Game</Filter>
     </ClCompile>
@@ -127,9 +124,6 @@
     </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>헤더 파일\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="TLevel.h">
-      <Filter>헤더 파일\GameLevel</Filter>
     </ClInclude>
     <ClInclude Include="GameLevel.h">
       <Filter>헤더 파일\GameLevel</Filter>

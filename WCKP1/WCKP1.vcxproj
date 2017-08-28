@@ -171,7 +171,6 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureManager.cpp" />
-    <ClCompile Include="TLevel.cpp" />
     <ClCompile Include="VertexArray.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -191,7 +190,6 @@
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureManager.h" />
-    <ClInclude Include="TLevel.h" />
     <ClInclude Include="VertexArray.h" />
   </ItemGroup>
   <ItemGroup>
