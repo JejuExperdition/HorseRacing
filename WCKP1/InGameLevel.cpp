@@ -3,14 +3,16 @@
 
 InGameLevel::InGameLevel(ID3D11Device* device) :
 	GameLevel(device, "Background1"),
-	m_Horse(device)
+	m_Horse(device),
+	m_Boosts(new Boost({ 500, 500 }))
 {
 	addObject(&m_Horse);
+	addObject(m_Boosts);
 }
 
 InGameLevel::~InGameLevel()
 {
-
+	delete m_Boosts;
 }
 
 void InGameLevel::update(float deltaTime)

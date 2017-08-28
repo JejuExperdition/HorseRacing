@@ -102,6 +102,12 @@
     <ClCompile Include="TextureManager.cpp">
       <Filter>소스 파일\ETC\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Boost.cpp">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>소스 파일\ETC</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
@@ -153,6 +159,12 @@
       <Filter>헤더 파일\ETC</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
+      <Filter>헤더 파일\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Boost.h">
+      <Filter>헤더 파일\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
       <Filter>헤더 파일\ETC</Filter>
     </ClInclude>
   </ItemGroup>

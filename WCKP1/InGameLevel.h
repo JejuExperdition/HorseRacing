@@ -1,6 +1,7 @@
 #pragma once
 #include "GameLevel.h"
 #include "Horse.h"
+#include "Boost.h"
 
 class InGameLevel : public GameLevel
 {
@@ -12,4 +13,5 @@ public:
 
 private:
 	Horse m_Horse;
+	Boost* m_Boosts;
 };
