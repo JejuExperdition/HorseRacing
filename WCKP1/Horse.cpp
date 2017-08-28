@@ -2,7 +2,7 @@
 #include "Input.h"
 
 Horse::Horse(ID3D11Device* device) :
-	GameObject(device, 82, 442, 0, &m_Sprite),
+	GameObject(device, 41, 221, 0, &m_Sprite),
 	m_Sprite(2, 5, { "Horse0", "Horse1" }),
 	m_IsMoving(false),
 	m_Direction(XM_PIDIV2),
@@ -50,12 +50,12 @@ void Horse::update(float deltaTime)
 		}
 	}
 
-	if (input.getKey('A'))
+	if (input.getKey(VK_LEFT))
 	{
 		m_Direction += 0.5 * deltaTime;
 	}
 
-	if (input.getKey('D'))
+	if (input.getKey(VK_RIGHT))
 	{
 		m_Direction -= 0.5 * deltaTime;
 	}
