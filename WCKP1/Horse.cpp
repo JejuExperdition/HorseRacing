@@ -50,12 +50,12 @@ void Horse::update(float deltaTime)
 		}
 	}
 
-	if (input.getKey('A'))
+	if (input.getKey(VK_LEFT))
 	{
 		m_Direction += 0.5 * deltaTime;
 	}
 
-	if (input.getKey('D'))
+	if (input.getKey(VK_RIGHT))
 	{
 		m_Direction -= 0.5 * deltaTime;
 	}
