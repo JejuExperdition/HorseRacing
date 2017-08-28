@@ -5,7 +5,9 @@ Sprite::Sprite(int count, float speed, std::vector<std::string> names) :
 	m_Textures(new Texture*[count]),
 	m_Speed(speed),
 	m_AcTime(0),
-	m_Index(0)
+	m_Index(0),
+	m_StartIndex(0),
+	m_EndIndex(count)
 {
 	for (int i = 0; i < m_TextureCount; i++)
 	{
@@ -36,6 +38,12 @@ Sprite::~Sprite()
 	delete[] m_Textures;
 }
 
+void Sprite::setIndex(int start, int end)
+{
+	m_StartIndex = start;
+	m_EndIndex = end;
+}
+
 void Sprite::update(float deltaTime)
 {
 	m_AcTime += deltaTime;
@@ -44,10 +52,10 @@ void Sprite::update(float deltaTime)
 		m_Index += 1;
 		m_AcTime -= 1 / m_Speed;
 	}
-	m_Index %= m_TextureCount;
+	m_Index %= (m_EndIndex - m_StartIndex);
 }
 
 void Sprite::bind(ID3D11DeviceContext* deviceContext)
 {
-	m_Textures[m_Index]->bind(deviceContext);
+	m_Textures[m_Index + m_StartIndex]->bind(deviceContext);
 }

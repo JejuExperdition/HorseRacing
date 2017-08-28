@@ -16,4 +16,7 @@ InGameLevel::~InGameLevel()
 void InGameLevel::update(float deltaTime)
 {
 	Input& input = *Input::getInstance();
+
+	getCamera().setAngle(m_Horse.getAngle() + XM_PIDIV2);
+	getCamera().setPosition(m_Horse.getPosition());
 }

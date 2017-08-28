@@ -10,6 +10,6 @@ Texture2D image;
 float4 main(PixelInputType input) : SV_TARGET
 {
 	float4 color = image.Sample(state, input.tex);
-	//clip(color.a - 0.05f);
+	clip(color.a - 0.05f);
 	return color;
 }

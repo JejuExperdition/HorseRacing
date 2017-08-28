@@ -17,9 +17,7 @@ public:
 	virtual void draw(ID3D11DeviceContext* deviceContext) final;
 
 protected:
-	virtual void moveCamera(XMFLOAT2& pos) final { m_Camera.move(pos); }
-	virtual void moveCamera(XMFLOAT2&& pos) final { m_Camera.move(pos); }
-	virtual const XMFLOAT2& getCameraPos() const final { return m_Camera.getPosition(); }
+	virtual Camera& getCamera() final { return m_Camera; }
 	
 	virtual void addObject(GameObject* obj) final { if(!isIncludeObject(obj)) m_ObjectSet.insert(obj); }
 	virtual void removeObject(GameObject* obj) final { if (m_ObjectSet.count(obj) == 1) m_ObjectSet.erase(obj); }

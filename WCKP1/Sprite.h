@@ -12,12 +12,16 @@ public:
 	Sprite(int count, float fps, std::vector<std::string> names);
 	~Sprite();
 
+	void setIndex(int start, int end);
 	void update(float deltaTime);
 	void bind(ID3D11DeviceContext* deviceContext);
+
 private:
 	Texture** m_Textures;
 	int m_TextureCount;
 	float m_Speed;
 	float m_AcTime;
 	int m_Index;
+	int m_StartIndex;
+	int m_EndIndex;
 };

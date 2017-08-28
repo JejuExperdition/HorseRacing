@@ -19,7 +19,8 @@ Camera::~Camera()
 
 Camera::Camera(ID3D11Device* device, XMFLOAT2 pos) :
 	m_ViewMatrixBuffer(nullptr),
-	m_Position(pos)
+	m_Position(pos),
+	m_Angle(XM_PIDIV2)
 {
 	D3D11_BUFFER_DESC vbd;
 	vbd.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
@@ -29,6 +30,7 @@ Camera::Camera(ID3D11Device* device, XMFLOAT2 pos) :
 	vbd.StructureByteStride = 0;
 	vbd.Usage = D3D11_USAGE_DYNAMIC;
 
+	float x = XMScalarCos(m_Angle);
 	XMMATRIX viewMatrix = XMMatrixLookAtLH(XMLoadFloat2(&m_Position), { 0.0f, 0.0f, 1.0f, 0.0f }, { 0.0f, 1.0f, 0.0f, 0.0f });
 	XMFLOAT4X4 view;
 	XMStoreFloat4x4(&view, viewMatrix);
@@ -69,10 +71,25 @@ void Camera::setPosition(const XMFLOAT2&& pos)
 	m_Position = pos;
 }
 
+float Camera::getAngle() const
+{
+	return m_Angle;
+}
+
+void Camera::setAngle(float angle)
+{
+	m_Angle = angle;
+}
+
+void Camera::spin(float angle)
+{
+	m_Angle += angle;
+}
+
 void Camera::draw(ID3D11DeviceContext* deviceContext)
 {
-	XMMATRIX viewMatrix = XMMatrixLookAtLH(XMLoadFloat2(&m_Position), 
-	{ 0.0f, 0.0f, 1.0f, 0.0f }, { 0.0f, 1.0f, 0.0f, 0.0f });
+	XMMATRIX viewMatrix = XMMatrixLookToLH(XMLoadFloat2(&m_Position), 
+	{ 0.0f, 0.0f, 1.0f, 0.0f }, { XMScalarCos(m_Angle), XMScalarSin(m_Angle), 0.0f, 0.0f });
 
 	D3D11_MAPPED_SUBRESOURCE vmr;
 	HRESULT hr = deviceContext->Map(m_ViewMatrixBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &vmr);
